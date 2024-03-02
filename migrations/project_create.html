@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Project</title>
+</head>
+<body>
+    <h1>Create Your Project</h1>
+    <form action="create_project_process.php" method="POST">
+        <label for="project_name">Project Name:</label><br>
+        <input type="text" id="project_name" name="project_name" required><br><br>
+
+        <label for="project_type">Project Type:</label><br>
+        <select id="project_type" name="project_type" required>
+            <option value="">Select Project Type</option>
+            <option value="Type A">Type A</option>
+            <option value="Type B">Type B</option>
+            <option value="Type C">Type C</option>
+            <!-- Add more project types as needed -->
+        </select><br><br>
+
+        <label for="duration">Duration:</label><br>
+        <input type="text" id="duration" name="duration" placeholder="e.g., 6 months" required><br><br>
+
+        <label for="csv_files">Import CSV Files:</label><br>
+        <input type="file" id="csv_files" name="csv_files[]" accept=".csv" multiple><br><br>
+
+        <input type="submit" value="Create Project">
+    </form>
+</body>
+</html>
