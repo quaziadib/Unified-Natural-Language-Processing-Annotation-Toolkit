@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annotator Job Posting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Annotator Job Posting</h1>
+    </header>
+    <main>
+        <section id="job-description">
+            <h2>Job Description</h2>
+            <p>We are seeking meticulous and detail-oriented annotators to join our team. As an annotator, you will play a crucial role in categorizing and labeling text data for various machine learning and natural language processing projects.</p>
+            <p><strong>Responsibilities:</strong></p>
+            <ul>
+                <li>Analyze and categorize text data according to predefined criteria and guidelines.</li>
+                <li>Apply accurate and consistent annotations to text samples for various classification tasks.</li>
+                <li>Review and verify annotations to ensure high quality and reliability of labeled data.</li>
+                <li>Collaborate with data scientists and engineers to understand project requirements and objectives.</li>
+                <li>Provide feedback and suggestions for improving annotation processes and tools.</li>
+            </ul>
+            <p><strong>Requirements:</strong></p>
+            <ul>
+                <li>Bachelor's degree in linguistics, computer science, or a related field (or equivalent work experience).</li>
+                <li>Strong attention to detail and ability to maintain focus during repetitive tasks.</li>
+                <li>Excellent understanding of language structure and grammar.</li>
+                <li>Good analytical and problem-solving skills.</li>
+                <li>Ability to work independently as well as collaboratively in a team environment.</li>
+            </ul>
+            <p>If you are interested in this position, please submit your resume and cover letter to [email address].</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Annotator Job Posting</p>
+    </footer>
+</body>
+</html>
