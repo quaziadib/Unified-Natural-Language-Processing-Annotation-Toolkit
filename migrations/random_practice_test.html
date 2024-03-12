@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Test for Annotators</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Practice Test for Annotators</h1>
+    </header>
+    <main>
+        <section id="question-section">
+            <h2>Answer the following question:</h2>
+            <div id="question-container">
+                <!-- Question will be fetched from the database dynamically -->
+                <p id="question">Loading question...</p>
+            </div>
+            <form id="answer-form">
+                <label for="answer">Your Answer:</label>
+                <input type="text" id="answer" name="answer" required>
+                <button type="submit">Submit Answer</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Practice Test for Annotators</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
