@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Classification Annotation Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Text Classification Annotation Tool</h1>
+    </header>
+    <main>
+        <section id="text-section">
+            <h2>Text</h2>
+            <div id="text-container">
+                <!-- Text to be classified will be displayed here -->
+                <p id="text-content">Example text goes here...</p>
+            </div>
+        </section>
+        <section id="annotation-section">
+            <h2>Annotation</h2>
+            <form id="annotation-form">
+                <label for="classification">Classification:</label>
+                <select id="classification" name="classification">
+                    <option value="positive">Positive</option>
+                    <option value="neutral">Neutral</option>
+                    <option value="negative">Negative</option>
+                </select>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Text Classification Annotation Tool</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
