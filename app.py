@@ -1,17 +1,48 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, flash, render_template, url_for, redirect
+from forms import RegistrationForm, LoginForm
 
 app = Flask(__name__)
 
-# Dummy database of exam questions and correct answers
+app.config['SECRET_KEY'] = '076ba9ea66b35151dac0f36f9aaafa23'
+
+app = Flask(__name__)
+
 exam_questions = {
     1: {"question": "What is the capital of France?", "answer": "Paris"},
     2: {"question": "Who wrote 'To Kill a Mockingbird'?", "answer": "Harper Lee"},
-    # Add more questions as needed
 }
 
 @app.route('/')
-def start_exam():
-    return render_template('exam.html', questions=exam_questions)
+@app.route('/home')
+def home():
+    return render_template('index.html', questions=exam_questions)
+
+@app.route("/register", methods=['GET', 'POST'])
+def register():
+    form = RegistrationForm()
+    if form.validate_on_submit():
+        flash(f'Account created for {form.username.data}!', 'success')
+        return redirect(url_for('home'))
+    return render_template('register.html', title='Register', form=form)
+
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    form = LoginForm()
+    
+    if form.validate_on_submit():
+        if form.email.data == 'admin@blog.com' and form.password.data == 'success':
+            flash(f'You have been logged in!', 'success')
+            return redirect(url_for('home'))
+        else:
+            flash(f'Login Unsuccessful. Please check username and password.', 'danger')
+            
+    return render_template(
+        'login.html',
+        title='login',
+        form=form)
+
+
 
 @app.route('/evaluate', methods=['POST'])
 def evaluate_exam():
@@ -28,6 +59,8 @@ def evaluate_exam():
 @app.route('/confirmation')
 def confirmation():
     return render_template('confirmation.html')
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
