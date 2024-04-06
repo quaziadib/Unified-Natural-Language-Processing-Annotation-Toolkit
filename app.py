@@ -10,7 +10,6 @@ app = Flask(__name__)
 exam_questions = {
     1: {"question": "What is the capital of France?", "answer": "Paris"},
     2: {"question": "Who wrote 'To Kill a Mockingbird'?", "answer": "Harper Lee"},
-   
 }
 
 @app.route('/')
