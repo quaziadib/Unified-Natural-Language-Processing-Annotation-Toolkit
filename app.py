@@ -1,5 +1,5 @@
 from flask import Flask, flash, render_template, url_for, redirect
-from forms import RegistrationForm, LoginForm
+from nlpAnnotationToolKit.forms import RegistrationForm, LoginForm
 
 app = Flask(__name__)
 

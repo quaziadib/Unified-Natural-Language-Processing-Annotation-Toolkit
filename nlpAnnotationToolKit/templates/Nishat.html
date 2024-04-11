@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sponsorship Information</title>
+</head>
+<body>
+    <h1>Sponsorship Information</h1>
+    <form action="/submit_sponsorship" method="post">
+        <label for="annotator_id">Annotator ID:</label><br>
+        <input type="text" id="annotator_id" name="annotator_id"><br><br>
+        
+        <label for="sponsorship">Received Sponsorship:</label><br>
+        <input type="radio" id="yes" name="sponsorship" value="yes">
+        <label for="yes">Yes</label><br>
+        <input type="radio" id="no" name="sponsorship" value="no">
+        <label for="no">No</label><br><br>
+        
+        <label for="sponsor_company">Sponsoring Company:</label><br>
+        <input type="text" id="sponsor_company" name="sponsor_company"><br><br>
+        
+        <label for="sponsor_amount">Sponsorship Amount:</label><br>
+        <input type="number" id="sponsor_amount" name="sponsor_amount" min="0"><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
