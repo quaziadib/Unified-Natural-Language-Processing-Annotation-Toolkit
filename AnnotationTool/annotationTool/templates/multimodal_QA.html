@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>MultiModal QA</h1>
+
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Premises: {{ text }}</legend>
+                <div class="form-group">
+                    {{ form.answer.label(class="form-control-label") }}
+                    {% if form.answer.errors %}
+                        {{ form.answer(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.answer.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.answer(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+               Any Issue? <a class="ml-2" href="{{ url_for('report') }}">Report Now</a>
+            </small>
+        </div>
+    </div>
+{% endblock content %}

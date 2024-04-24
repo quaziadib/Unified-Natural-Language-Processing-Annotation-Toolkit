@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+{% block content %}
+<figure class="text-center">
+    <blockquote class="blockquote">
+      <p> <h1>User Dashboard</h1></p>
+    </blockquote>
+ 
+    
+  </figure>
+
+  <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <div class="p-3 mb-2 bg-primary-subtle text-primary-emphasis"><h4>Annotator</h4></div>
+        <div class="content-section">
+            <form method="POST" action="">
+                {{ form.hidden_tag() }}
+                <fieldset class="form-group">
+                    <legend class="border-bottom mb-4">{{ legend }}</legend>
+                    <div class="form-group">
+                        {{ form.projectType.label(class="form-control-label") }}
+                        <br>
+                        {% if form.projectType.errors %}
+                            {{ form.projectType(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.projectType.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                        {% else %}
+                            {{ form.projectType(class="form-control form-control-lg") }}
+                        {% endif %}
+                    </div>
+            
+                </fieldset>
+            </form>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <button type="button" class="btn btn-dark">Apply For a Project</button>
+
+      </div>
+      <div class="col">
+        <div class="p-3 mb-2 bg-primary-subtle text-warning-emphasis"><h4>Project Manager</h4></div>
+        <div class="btn-group">
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+            Recent Projects
+          </button>
+          <ul class="list-group">
+            <li class="list-group-item">A simple default list group item</li>
+          
+            <li class="list-group-item list-group-item-primary">Project 1</li>
+            <li class="list-group-item list-group-item-secondary">Project 2</li>
+            <li class="list-group-item list-group-item-success">Project 3</li>
+            <li class="list-group-item list-group-item-danger">Project 4</li>
+            
+          </ul>
+        </div>
+        <br/>
+        <br/>
+        <br/>
+        <button type="button" class="btn btn-dark">Create a Project</button>
+      </div>
+      
+    </div>
+  </div>
+{% endblock content %}
+
+

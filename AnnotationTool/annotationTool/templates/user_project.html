@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <h1 class="mb-3">Projects by {{ user.username }}</h1>
+
+    {% for project in projects %}
+        <article class="media content-section">
+          <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + project.author.image_file) }}">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ project.author.username }}</a>
+              <small class="text-muted">{{ project.date_posted.strftime('%Y-%m-%d') }}</small>
+            </div>
+            <h2><a class="article-title" href="{{ url_for('project', project_id=project.id) }}">{{ project.title }}</a></h2>
+            <p class="article-content">{{ project.description }}</p>
+            {% if current_user.project_id %}
+              {% if current_user.is_passed %}
+                <a href="" class="btn btn-outline-info"> Annotate </a>
+              {% else %}
+                <a href="{{ url_for('exam', user_id=user.id) }}" class="btn btn-outline-info"> Seat For Exam! </a>
+              {% endif %}
+            {% else %}
+                <a class="btn btn-outline-info" href="{{ url_for('new_post', project_id=project.id) }}">Post to Hire Annotators!</a>
+            {% endif %}
+          </div>
+          
+        </article>
+    {% endfor %}
+   
+{% endblock content %}

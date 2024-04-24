@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Report Page</h1>
+    <figure class="text-center">
+        <blockquote class="blockquote">
+            <p>
+            <h2>Project Report</h2>
+            </p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+
+        </figcaption>
+    </figure>
+    <!-- <img src="https://valuefinance.in/wp-content/uploads/2020/05/report.png" class="img-fluid" alt="..."> -->
+    <div class="card" style="width: 30rem;">
+        <img src="https://images.pexels.com/photos/272980/pexels-photo-272980.jpeg?cs=srgb&dl=pexels-pixabay-272980.jpg&fm=jpg"
+            class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Project Name</h5>
+
+            <p class="d-inline-flex gap-1">
+
+                <button class="btn btn-secondary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Report Title
+                </button>
+
+                <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    From
+                </button>
+
+                <button class="btn btn-success" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Data
+                </button>
+                <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+                    aria-expanded="false" aria-controls="collapseExample">
+                    Date
+                </button>
+
+                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                    aria-expanded="false" aria-controls="collapseExample">
+                    Link with href
+                </a>
+            </p>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    Some placeholder content for the collapse component. This panel is hidden by default but revealed
+                    when the user activates the relevant trigger.
+                </div>
+            </div>
+        </div>
+{% endblock content %}
+
+   

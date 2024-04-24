@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1 style="text-align: center">Project Dashboard</h1>
+    <div class="article-metadata" style="text-align: center">
+        <h2 class="article-title">{{ project.title }}</h2>
+        <p>{{project.description}}</p>
+        <p>{{project.author.username}}</p>
+    </div>
+
+    <div class="article-metadata">
+        <div class="content-section">
+            <a href="" class="btn btn-primary gap"> Annotator Management</a>
+            <br>
+            <a href="" class="btn btn-primary gap"> Colab Management</a>
+            <br>
+            <a href="" class="btn btn-primary gap"> Performance Overview</a>
+            <br>
+            <a href="" class="btn btn-primary gap"> Communication</a>
+    
+        </div>
+    </div>
+    
+
+    
+    
+{% endblock content %}

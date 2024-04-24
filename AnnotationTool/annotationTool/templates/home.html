@@ -1,0 +1,42 @@
+
+{% extends "layout.html" %}
+{% block content %}
+  <div>
+    <h1> Contribute in Open Projects</h1>
+    <br>
+    <br>
+  </div>  
+    {% for post in posts %}
+        <article class="media content-section">
+          <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ post.author.username }}</a>
+              <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
+            </div>
+            <div class="article-metadata">
+              <h2><a class="article-title" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a></h2>
+            </div>
+            <div class="article-metadata">
+              <h3>Project Description</h3>
+              <p class="article-content">{{ post.description }}</p>            
+            </div>
+            <div class="article-metadata">
+              <h3>Project Requirements</h3>
+              <p class="article-content">{{ post.requirements }}</p>            
+            </div>
+            <div class="article-metadata">
+              <h3>Agreement</h3>
+              <p class="article-content">{{ post.agreement }}</p>          
+            </div>
+            <div class="article-metadata">
+              <h3>Contact</h3>
+              <p class="article-content">{{ post.author.email }}</p>          
+            </div>
+
+            <a href="{{ url_for('register_annotator', project_id=post.projectID) }}" class="btn btn-primary"> Apply </a>
+          </div>
+          
+        </article>
+    {% endfor %}
+{% endblock content %}
